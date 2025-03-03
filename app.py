@@ -25,7 +25,7 @@ st.markdown("<hr style='border:1px solid #000000;'>", unsafe_allow_html=True)
 if selected_tab == "📝 Feedback":
     st.markdown('<p class="header">📝 Feedback</p>', unsafe_allow_html=True)
     
-    if st.link_button("✍️ Submit Feedback"):
+    if st.button("✍️ Submit Feedback"):
         webbrowser.open_new_tab(FEEDBACK_URL)
 
 # Doubts Section
