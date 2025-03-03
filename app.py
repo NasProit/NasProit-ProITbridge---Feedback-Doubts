@@ -25,7 +25,7 @@ st.markdown("<hr style='border:1px solid #000000;'>", unsafe_allow_html=True)
 if selected_tab == "📝 Feedback":
     st.markdown('<p class="header">📝 Feedback</p>', unsafe_allow_html=True)
     
-    if st.button("✍️ Submit Feedback"):
+    if st.link_button"✍️ Submit Feedback"):
         webbrowser.open_new_tab(FEEDBACK_URL)
 
 # Doubts Section
@@ -33,5 +33,5 @@ elif selected_tab == "❓ Doubts":
     st.markdown('<p class="header">❓ Doubts</p>', unsafe_allow_html=True)
     topic = st.selectbox("📚 Select a topic", list(FORM_LINKS.keys()))
 
-    if st.button(f"🚀 Ask Doubt in {topic}"):
+    if st.link_button(f"🚀 Ask Doubt in {topic}"):
         webbrowser.open_new_tab(FORM_LINKS[topic])
