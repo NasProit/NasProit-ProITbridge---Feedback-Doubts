@@ -1,0 +1,47 @@
+.stApp {
+    background-color: white;
+}
+.stButton>button {
+    background-color: #2596be;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 10px;
+}
+.stButton>button:hover {
+    background-color: #0b0039;
+}
+.title {
+    color: #0b0039;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.tab-box {
+    background-color: #2596be;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 12px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.tab-box:hover {
+    background-color: #0b0039;
+}
+.header {
+    color: #2596be;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
