@@ -1,5 +1,4 @@
 import streamlit as st
-import webbrowser
 from url import FORM_LINKS, FEEDBACK_URL
 
 # Load CSS
@@ -11,7 +10,6 @@ def load_css():
 load_css()
 
 # App Title with Logo
-
 st.markdown('<p class="title">✨ ProITbridge - Feedback & Doubts ✨</p>', unsafe_allow_html=True)
 
 # Sidebar Navigation
@@ -25,13 +23,13 @@ st.markdown("<hr style='border:1px solid #000000;'>", unsafe_allow_html=True)
 if selected_tab == "📝 Feedback":
     st.markdown('<p class="header">📝 Feedback</p>', unsafe_allow_html=True)
     
-    if st.link_button("✍️ Submit Feedback", FEEDBACK_URL)
-
+    # Proper way to open links on Streamlit Cloud
+    st.link_button("✍️ Submit Feedback", FEEDBACK_URL)
 
 # Doubts Section
 elif selected_tab == "❓ Doubts":
     st.markdown('<p class="header">❓ Doubts</p>', unsafe_allow_html=True)
     topic = st.selectbox("📚 Select a topic", list(FORM_LINKS.keys()))
 
-    if st.link_button(f"🚀 Ask Doubt in {topic}"):
-        webbrowser.open_new_tab(FORM_LINKS[topic])
+    # Correct way to open Google Form links
+    st.link_button(f"🚀 Ask Doubt in {topic}", FORM_LINKS[topic])
